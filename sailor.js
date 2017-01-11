@@ -1,4 +1,4 @@
-function Sailor(name) {
+function Sailor() {
 }
 
 
