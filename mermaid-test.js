@@ -13,14 +13,6 @@ describe('Mermaid', function () {
     assert.deepEqual(mermaid.trinkets, ['ring', 'necklace', 'diamond']);
   });
 
-  it.skip('should change its name by shouting a new name', function() {
-    var mermaid = new Mermaid({name: 'Beatrice'});
-    mermaid.shout('Persimmon');
-    assert.equal(mermaid.name, 'Persimmon')
-    mermaid.shout('Taylor');
-    assert.equal(mermaid.name, 'Taylor')
-  });
-  
   it.skip('should sort trinkets in alphabetical order', function() {
     var mermaid = new Mermaid({name: 'Beatrice', trinkets: ['gold', 'silver', 'platinum', 'bronze']});
     assert.deepEqual(mermaid.organize(), ['bronze', 'gold', 'platinum', 'silver'])
