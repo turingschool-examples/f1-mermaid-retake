@@ -12,11 +12,19 @@ describe('Mermaid', function () {
     var mermaid = new Mermaid({name: 'Robbie'});
     assert.deepEqual(mermaid.trinkets, ['ring', 'necklace', 'diamond']);
   });
-
-  it.skip('should sort trinkets in alphabetical order', function() {
-    var mermaid = new Mermaid({name: 'Beatrice', trinkets: ['gold', 'silver', 'platinum', 'bronze']});
-    assert.deepEqual(mermaid.organize(), ['bronze', 'gold', 'platinum', 'silver'])
+  
+  it.skip('should supersize trinkets', function() {
+    var mermaid = new Mermaid({name: 'Robbie'});
+    assert.deepEqual(mermaid.supersize(), ['RING', 'NECKLACE', 'DIAMOND']);
   });
+
+  it.skip('should supersize trinkets in reverse order when it is in the Arctic', function() {
+    var mermaid = new Mermaid({name: 'Robbie', trinkets: ['emerald', 'ruby', 'topaz', 'pearl']});
+    var ocean = 'Arctic';
+    mermaid.swim(ocean);
+    assert.equal(mermaid.ocean, 'Arctic');
+    assert.deepEqual(mermaid.trinkets, ['PEARL', 'TOPAZ', 'RUBY', 'EMERALD'])
+  })
   
   it.skip('should clean out any trinkets that are not strings', function() {
     var mermaid = new Mermaid({name: 'Beatrice', trinkets: ['gold', 55, 'platinum', true]});
